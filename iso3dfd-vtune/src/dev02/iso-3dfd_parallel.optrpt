@@ -2,9 +2,9 @@ Intel(R) Advisor can now assist with vectorization and show optimization
   report messages with your source code.
 See "https://software.intel.com/en-us/intel-advisor-xe" for details.
 
-Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 18.0.0.128 Build 20170811
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 18.0.1.163 Build 20171018
 
-Compiler options: -DDT=0.002f -DDXYZ=50.0f -DHALF_LENGTH=8 -DBLOCK_Z_Y_X -g -qopt-report5 -qopt-report-phase=vec -std=c++11 -fp-model precise -xAVX -zero -qopenmp -o iso-3dfd_parallel.o -c
+Compiler options: -DDT=0.002f -DDXYZ=50.0f -DHALF_LENGTH=8 -DBLOCK_Z_Y_X -g -qopt-report5 -qopt-report-phase=vec -std=c++11 -fp-model precise -xCORE-AVX2 -zero -qopenmp -o iso-3dfd_parallel.o -c
 
 Begin optimization report for: iso_3dfd_it(float *, float *, float *, float *, int, int, int, int, int, int, int)
 

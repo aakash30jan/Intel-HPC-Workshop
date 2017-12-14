@@ -36,7 +36,10 @@ void iso_3dfd_it(float *ptr_next,  float *ptr_prev,  float *ptr_vel,   float *co
 	      const int n1, const int n2, const int n3, const int num_threads,
 	      const int n1_Tblock, const int n2_Tblock, const int n3_Tblock){
 	int dimn1n2 = n1*n2;//This value will be used later
-	for(int ix=0; ix<n1; ix++) {
+	
+      #pragma omp-parallel for  //this is what is done in dev01
+
+       for(int ix=0; ix<n1; ix++) {
 		for(int iy=0; iy<n2; iy++) {
 			for(int iz=0; iz<n3; iz++) {
 				if( ix>=HALF_LENGTH && ix<(n1-HALF_LENGTH) && iy>=HALF_LENGTH && iy<(n2-HALF_LENGTH) && iz>=HALF_LENGTH && iz<(n3-HALF_LENGTH) ) {

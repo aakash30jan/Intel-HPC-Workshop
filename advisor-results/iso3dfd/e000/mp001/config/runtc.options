@@ -1,0 +1,12 @@
+-r
+/tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/advisor-results/iso3dfd/e000/mp001
+--tool=map
+--record-stack-frame
+--sample-size=300000
+--record-mem-allocations
+--zca=/tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/advisor-results/iso3dfd/e000/loop_annotations.def
+--
+/tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/bin/iso3dfd_dev01_cpu_avx2.exe
+64
+64
+64

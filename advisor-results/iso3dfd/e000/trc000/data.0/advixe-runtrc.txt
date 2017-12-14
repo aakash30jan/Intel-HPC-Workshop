@@ -1,0 +1,8 @@
+
+=== Start: [2017/12/14 16:04:17] === 
+Analysis started...
+Result file: /tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/advisor-results/iso3dfd/e000/trc000/trc000.advixe 
+Application exit code: 0 
+Result file: /tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/advisor-results/iso3dfd/e000/trc000/trc000.advixe 
+Analysis completed
+=== End: [2017/12/14 16:04:22] === 

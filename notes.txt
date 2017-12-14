@@ -22,5 +22,61 @@ flops:          0.51 GFlops
 guest-6wgwgt@mathcalc10:~/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/bin$ 
 
 cd ..
+guest-6wgwgt@mathcalc10:~/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune$ amplxe-gui &
+
+
+#note----  hyperthreading -- more logical cores
+
+
+
+guest-6wgwgt@mathcalc10:~/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune$ make build version=dev01 simd=avx2
+
+
+make last is first calling make clean
+make clean
+make[1] : on entre dans le répertoire « /tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune »
+
+
+Calling make clean model="cpu" simd="avx2" version="dev01"
+cd /tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/src/dev01;make clean;rm -f /tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/../../bin/iso3dfd_dev01_cpu_avx2.exe;cd /tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune
+make[2] : on entre dans le répertoire « /tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/src/dev01 »
+rm -f iso-3dfd_parallel.o iso-3dfd_main.o /tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/src/dev01/../../bin/iso3dfd_dev01_cpu_avx2.exe *.o
+make[2] : on quitte le répertoire « /tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/src/dev01 »
+make[1] : on quitte le répertoire « /tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune »
+Now that make clean has been called, calling make build model="cpu" simd="avx2" version="dev01"
+cd /tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/src/dev01;make all model="cpu" simd="avx2" version="dev01" 
+make[1] : on entre dans le répertoire « /tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/src/dev01 »
+icpc  -DDT=0.002f -DDXYZ=50.0f -DHALF_LENGTH=8 -DBLOCK_Z_Y_X       -g -qopt-report5 -qopt-report-phase=vec    -std=c++11 -fp-model precise   -xCORE-AVX2  -zero  -qopenmp  -o iso-3dfd_parallel.o -c iso-3dfd_parallel.cc 
+icpc: remark #10397: optimization reports are generated in *.optrpt files in the output location
+icpc  -DDT=0.002f -DDXYZ=50.0f -DHALF_LENGTH=8 -DBLOCK_Z_Y_X       -g -qopt-report5 -qopt-report-phase=vec    -std=c++11 -fp-model precise   -xCORE-AVX2  -zero  -qopenmp  -o iso-3dfd_main.o -c iso-3dfd_main.cc 
+icpc: remark #10397: optimization reports are generated in *.optrpt files in the output location
+icpc  -qopenmp -lrt  iso-3dfd_parallel.o iso-3dfd_main.o  -o /tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/src/dev01/../../bin/iso3dfd_dev01_cpu_avx2.exe  
+make[1] : on quitte le répertoire « /tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/src/dev01 »
+cd /tmp/guest-6wgwgt/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune
+guest-6wgwgt@mathcalc10:~/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune$ cd bin/
+guest-6wgwgt@mathcalc10:~/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/bin$ ls
+iso3dfd_dev00_unoptimized_cpu_avx2.exe  iso3dfd_dev01_cpu_avx2.exe
+guest-6wgwgt@mathcalc10:~/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/bin$ ./ iso3dfd_dev01_cpu_avx2.exe 
+bash: ./ : est un dossier
+guest-6wgwgt@mathcalc10:~/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/bin$ ./ iso3dfd_dev01_cpu_avx2.exe 128 128 128
+bash: ./ : est un dossier
+guest-6wgwgt@mathcalc10:~/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/bin$ ./iso3dfd_dev01_cpu_avx2.exe 128 128 128
+n1=128 n2=128 n3=128 nreps=100 num_threads=8 HALF_LENGTH=8
+n1_thrd_block=128 n2_thrd_block=1 n3_thrd_block=124
+allocating prev, next and vel: total 24 Mbytes
+-------------------------------
+time:           4.29 sec
+throughput:    32.73 MPoints/s
+flops:          2.00 GFlops
+guest-6wgwgt@mathcalc10:~/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/bin$ 
+
+
+#note---- stick to structure of arrays instead of array of structures
+
+
+for qdvisor run -----      advixe-gui
+
+
+
 
 
