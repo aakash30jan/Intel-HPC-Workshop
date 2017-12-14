@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<bag xmlns:boolean="http://www.w3.org/2001/XMLSchema#boolean" xmlns:int="http://www.w3.org/2001/XMLSchema#int" int:version="1">
+ <SurveyView>
+  <BottomUpGrid>
+   <ColumnStructure>
+    <Visibility>
+     <boolean:fdFunctionName>true</boolean:fdFunctionName>
+     <boolean:fdLoopAnnotation>true</boolean:fdLoopAnnotation>
+     <boolean:fdRecommendationPresence>true</boolean:fdRecommendationPresence>
+     <boolean:fdSelfTime>true</boolean:fdSelfTime>
+     <boolean:fdTotalTime>true</boolean:fdTotalTime>
+     <boolean:fdCompilerOptInfoVectLoopTypeSplitting>true</boolean:fdCompilerOptInfoVectLoopTypeSplitting>
+     <boolean:fdCompilerOptInfoVectMsg>true</boolean:fdCompilerOptInfoVectMsg>
+     <boolean:fdVectInfo>true</boolean:fdVectInfo>
+     <boolean:fdFLOPandMasks>true</boolean:fdFLOPandMasks>
+     <boolean:fdTripCount>true</boolean:fdTripCount>
+     <boolean:fdVectInfoInstSetAnalysis>true</boolean:fdVectInfoInstSetAnalysis>
+     <boolean:fdCompilerOptDetails>true</boolean:fdCompilerOptDetails>
+     <boolean:fdLocation>true</boolean:fdLocation>
+    </Visibility>
+   </ColumnStructure>
+   <ColumnWidth int:fdFunctionName="315" int:fdLoopAnnotation="45" int:fdRecommendationPresence="323" int:fdSelfTime="77" int:fdTotalTime="84" int:fdCompilerOptInfoVectLoopTypeSplitting="112" int:fdCompilerOptInfoVectMsg="154" int:fdVectInfoInstSets="49" int:fdVectorGain="49" int:fdVectorLength="49" int:fdSelfGFLOPS="84" int:fdSelfArithmeticIntensity="84" int:fdTripCountMedian="84" int:fdTripCountOccurrences="84" int:fdVectInfoInstClasses="154" int:fdVectInfoVectDataTypes="63" int:fdUsedRegistersNumber="49" int:fdCompilerOptDetails="112" int:fdLocation="146"/>
+  </BottomUpGrid>
+  <TopDownGrid>
+   <ColumnStructure>
+    <Visibility>
+     <boolean:fdFunctionName>true</boolean:fdFunctionName>
+     <boolean:fdTotalTimePercent>true</boolean:fdTotalTimePercent>
+     <boolean:fdTotalTime>true</boolean:fdTotalTime>
+     <boolean:fdSelfTime>true</boolean:fdSelfTime>
+     <boolean:fdCompilerOptInfoVectLoopTypeSplitting>true</boolean:fdCompilerOptInfoVectLoopTypeSplitting>
+     <boolean:fdCompilerOptInfoVectMsg>true</boolean:fdCompilerOptInfoVectMsg>
+     <boolean:fdVectInfo>true</boolean:fdVectInfo>
+     <boolean:fdVectInfoInstSetAnalysis>true</boolean:fdVectInfoInstSetAnalysis>
+     <boolean:fdCompilerOptDetails>true</boolean:fdCompilerOptDetails>
+     <boolean:fdLocation>true</boolean:fdLocation>
+    </Visibility>
+   </ColumnStructure>
+  </TopDownGrid>
+ </SurveyView>
+ <FilterView boolean:VectorizedButtonChecked="true" boolean:NotVectorizedButtonChecked="true" boolean:FakeLoopButtonChecked="false" boolean:LibrariesButtonChecked="false" LoopsAndFunctionsFilterValue="Loops And Functions"/>
+ <MapSourceView boolean:SourcePaneVisible="true" boolean:AsmPaneVisible="true" boolean:DetailsVisible="true">
+  <SourceView>
+   <ColumnWidth int:SplitterPos="615"/>
+  </SourceView>
+ </MapSourceView>
+</bag>
