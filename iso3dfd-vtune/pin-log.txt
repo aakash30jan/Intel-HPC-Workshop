@@ -1,0 +1,2 @@
+Pin 3.1 kit 77659
+E:  Wait for injector failed: No child processes

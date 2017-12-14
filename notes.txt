@@ -1,0 +1,26 @@
+guest-6wgwgt@mathcalc10:~/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune$ tree .
+Le programme « tree » n'est pas encore installé. Pour exécuter « tree », veuillez demander à votre administrateur d'installer le paquet « tree »
+guest-6wgwgt@mathcalc10:~/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune$ icc
+La commande « icc » est introuvable, mais il y en a 27 similaires
+icc : commande introuvable
+guest-6wgwgt@mathcalc10:~/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune$ source /opt/intel/parallel_studio_xe_2018/psxevars.sh
+Intel(R) Parallel Studio XE 2018 Update 1 for Linux*
+Copyright (C) 2009-2017 Intel Corporation. All rights reserved.
+guest-6wgwgt@mathcalc10:~/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune$make build version=dev00_unoptimized simd=avx2
+
+lscpu
+
+cd bin
+
+guest-6wgwgt@mathcalc10:~/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/bin$ ./iso3dfd_dev00_unoptimized_cpu_avx2.exe  128 128 128n1=128 n2=128 n3=128 nreps=100 num_threads=8 HALF_LENGTH=8
+n1_thrd_block=128 n2_thrd_block=1 n3_thrd_block=124
+allocating prev, next and vel: total 24 Mbytes
+-------------------------------
+time:          16.88 sec
+throughput:     8.33 MPoints/s
+flops:          0.51 GFlops
+guest-6wgwgt@mathcalc10:~/aakash_work/Intel-HPC-Workshop/iso3dfd-vtune/bin$ 
+
+cd ..
+
+

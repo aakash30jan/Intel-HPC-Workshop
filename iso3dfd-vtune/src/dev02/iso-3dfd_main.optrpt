@@ -1,0 +1,98 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 18.0.0.128 Build 20170811
+
+Compiler options: -DDT=0.002f -DDXYZ=50.0f -DHALF_LENGTH=8 -DBLOCK_Z_Y_X -g -qopt-report5 -qopt-report-phase=vec -std=c++11 -fp-model precise -xAVX -zero -qopenmp -o iso-3dfd_main.o -c
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at iso-3dfd_main.cc(164,2)
+   remark #15389: vectorization support: reference coeff[i] has unaligned access   [ iso-3dfd_main.cc(165,3) ]
+   remark #15389: vectorization support: reference coeff[i] has unaligned access   [ iso-3dfd_main.cc(165,14) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15427: loop was completely unrolled
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 30 
+   remark #15477: vector cost: 5.120 
+   remark #15478: estimated potential speedup: 5.850 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at iso-3dfd_main.cc(59,9) inlined into iso-3dfd_main.cc(197,2)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at iso-3dfd_main.cc(60,17) inlined into iso-3dfd_main.cc(197,2)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at iso-3dfd_main.cc(61,25) inlined into iso-3dfd_main.cc(197,2)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at iso-3dfd_main.cc(62,33) inlined into iso-3dfd_main.cc(197,2)
+            remark #15389: vectorization support: reference prev_base[(i*p.n1)*p.n2+j*p.n1+k] has unaligned access   [ iso-3dfd_main.cc(63,41) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 4
+            remark #15399: vectorization support: unroll factor set to 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.500
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 10 
+            remark #15477: vector cost: 1.500 
+            remark #15478: estimated potential speedup: 6.120 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at iso-3dfd_main.cc(62,33) inlined into iso-3dfd_main.cc(197,2)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: initialize(float *, float *, float *, Parameters *, size_t)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at iso-3dfd_main.cc(59,9)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at iso-3dfd_main.cc(60,17)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at iso-3dfd_main.cc(61,25)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at iso-3dfd_main.cc(62,33)
+            remark #15389: vectorization support: reference ptr_prev[(i*p->n1)*p->n2+j*p->n1+k] has unaligned access   [ iso-3dfd_main.cc(63,41) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 4
+            remark #15399: vectorization support: unroll factor set to 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.500
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 10 
+            remark #15477: vector cost: 1.500 
+            remark #15478: estimated potential speedup: 6.120 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at iso-3dfd_main.cc(62,33)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================

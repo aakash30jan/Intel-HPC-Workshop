@@ -1,0 +1,316 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 18.0.0.128 Build 20170811
+
+Compiler options: -DDT=0.002f -DDXYZ=50.0f -DHALF_LENGTH=8 -DBLOCK_Z_Y_X -g -qopt-report5 -qopt-report-phase=vec -std=c++11 -fp-model precise -xCORE-AVX2 -zero -qopenmp -o iso-3dfd_parallel.o -c
+
+Begin optimization report for: iso_3dfd_it(float *, float *, float *, float *, int, int, int, int, int, int, int)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at iso-3dfd_parallel.cc(52,2)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at iso-3dfd_parallel.cc(59,5)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at iso-3dfd_parallel.cc(60,6)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at iso-3dfd_parallel.cc(65,7)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at iso-3dfd_parallel.cc(65,7)
+            remark #15389: vectorization support: reference ptr_prev[ix] has unaligned access   [ iso-3dfd_parallel.cc(67,17) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_next[ix] has unaligned access   [ iso-3dfd_parallel.cc(74,8) ]
+            remark #15389: vectorization support: reference ptr_prev[ix] has unaligned access   [ iso-3dfd_parallel.cc(74,29) ]
+            remark #15389: vectorization support: reference ptr_next[ix] has unaligned access   [ iso-3dfd_parallel.cc(74,44) ]
+            remark #15389: vectorization support: reference ptr_vel[ix] has unaligned access   [ iso-3dfd_parallel.cc(74,65) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 8
+            remark #15309: vectorization support: normalized vectorization overhead 0.753
+            remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+            remark #15442: entire loop may be executed in remainder
+            remark #15450: unmasked unaligned unit stride loads: 52 
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 288 
+            remark #15477: vector cost: 41.000 
+            remark #15478: estimated potential speedup: 5.570 
+            remark #15488: --- end vector cost summary ---
+
+            LOOP BEGIN at iso-3dfd_parallel.cc(69,8)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at iso-3dfd_parallel.cc(65,7)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at iso-3dfd_parallel.cc(52,2)
+   remark #15543: loop was not vectorized: loop with function call not considered an optimization candidate.
+LOOP END
+===========================================================================
+
+Begin optimization report for: iso_3dfd(float *, float *, float *, float *, int, int, int, int, int, int, int, int)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at iso-3dfd_parallel.cc(52,2) inlined into iso-3dfd_parallel.cc(99,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at iso-3dfd_parallel.cc(59,5) inlined into iso-3dfd_parallel.cc(99,5)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at iso-3dfd_parallel.cc(60,6) inlined into iso-3dfd_parallel.cc(99,5)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at iso-3dfd_parallel.cc(65,7) inlined into iso-3dfd_parallel.cc(99,5)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at iso-3dfd_parallel.cc(65,7) inlined into iso-3dfd_parallel.cc(99,5)
+            remark #15389: vectorization support: reference ptr_prev[ix] has unaligned access   [ iso-3dfd_parallel.cc(67,17) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_next[ix] has unaligned access   [ iso-3dfd_parallel.cc(74,8) ]
+            remark #15389: vectorization support: reference ptr_prev[ix] has unaligned access   [ iso-3dfd_parallel.cc(74,29) ]
+            remark #15389: vectorization support: reference ptr_next[ix] has unaligned access   [ iso-3dfd_parallel.cc(74,44) ]
+            remark #15389: vectorization support: reference ptr_vel[ix] has unaligned access   [ iso-3dfd_parallel.cc(74,65) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 8
+            remark #15309: vectorization support: normalized vectorization overhead 0.753
+            remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+            remark #15442: entire loop may be executed in remainder
+            remark #15450: unmasked unaligned unit stride loads: 52 
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 288 
+            remark #15477: vector cost: 41.000 
+            remark #15478: estimated potential speedup: 5.570 
+            remark #15488: --- end vector cost summary ---
+
+            LOOP BEGIN at iso-3dfd_parallel.cc(69,8) inlined into iso-3dfd_parallel.cc(99,5)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at iso-3dfd_parallel.cc(65,7) inlined into iso-3dfd_parallel.cc(99,5)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at iso-3dfd_parallel.cc(52,2) inlined into iso-3dfd_parallel.cc(105,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at iso-3dfd_parallel.cc(59,5) inlined into iso-3dfd_parallel.cc(105,5)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at iso-3dfd_parallel.cc(60,6) inlined into iso-3dfd_parallel.cc(105,5)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at iso-3dfd_parallel.cc(65,7) inlined into iso-3dfd_parallel.cc(105,5)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at iso-3dfd_parallel.cc(65,7) inlined into iso-3dfd_parallel.cc(105,5)
+            remark #15389: vectorization support: reference ptr_prev[ix] has unaligned access   [ iso-3dfd_parallel.cc(67,17) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir] has unaligned access   [ iso-3dfd_parallel.cc(70,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir] has unaligned access   [ iso-3dfd_parallel.cc(70,51) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*n1] has unaligned access   [ iso-3dfd_parallel.cc(71,54) ]
+            remark #15389: vectorization support: reference ptr_prev[ix+ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,31) ]
+            remark #15389: vectorization support: reference ptr_prev[ix-ir*dimn1n2] has unaligned access   [ iso-3dfd_parallel.cc(72,59) ]
+            remark #15389: vectorization support: reference ptr_next[ix] has unaligned access   [ iso-3dfd_parallel.cc(74,8) ]
+            remark #15389: vectorization support: reference ptr_prev[ix] has unaligned access   [ iso-3dfd_parallel.cc(74,29) ]
+            remark #15389: vectorization support: reference ptr_next[ix] has unaligned access   [ iso-3dfd_parallel.cc(74,44) ]
+            remark #15389: vectorization support: reference ptr_vel[ix] has unaligned access   [ iso-3dfd_parallel.cc(74,65) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 8
+            remark #15309: vectorization support: normalized vectorization overhead 0.753
+            remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+            remark #15442: entire loop may be executed in remainder
+            remark #15450: unmasked unaligned unit stride loads: 52 
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 288 
+            remark #15477: vector cost: 41.000 
+            remark #15478: estimated potential speedup: 5.570 
+            remark #15488: --- end vector cost summary ---
+
+            LOOP BEGIN at iso-3dfd_parallel.cc(69,8) inlined into iso-3dfd_parallel.cc(105,5)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at iso-3dfd_parallel.cc(65,7) inlined into iso-3dfd_parallel.cc(105,5)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at iso-3dfd_parallel.cc(97,3)
+   remark #15543: loop was not vectorized: loop with function call not considered an optimization candidate.
+LOOP END
+
+LOOP BEGIN at iso-3dfd_parallel.cc(52,2) inlined into iso-3dfd_parallel.cc(99,5)
+   remark #15543: loop was not vectorized: loop with function call not considered an optimization candidate.
+LOOP END
+
+LOOP BEGIN at iso-3dfd_parallel.cc(52,2) inlined into iso-3dfd_parallel.cc(105,5)
+   remark #15543: loop was not vectorized: loop with function call not considered an optimization candidate.
+LOOP END
+===========================================================================

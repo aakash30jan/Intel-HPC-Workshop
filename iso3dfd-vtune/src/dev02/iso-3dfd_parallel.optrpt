@@ -1,0 +1,75 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 18.0.0.128 Build 20170811
+
+Compiler options: -DDT=0.002f -DDXYZ=50.0f -DHALF_LENGTH=8 -DBLOCK_Z_Y_X -g -qopt-report5 -qopt-report-phase=vec -std=c++11 -fp-model precise -xAVX -zero -qopenmp -o iso-3dfd_parallel.o -c
+
+Begin optimization report for: iso_3dfd_it(float *, float *, float *, float *, int, int, int, int, int, int, int)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at iso-3dfd_parallel.cc(40,2)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at iso-3dfd_parallel.cc(41,4)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+      LOOP BEGIN at iso-3dfd_parallel.cc(42,3)
+         remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+         LOOP BEGIN at iso-3dfd_parallel.cc(47,6)
+            remark #15331: loop was not vectorized: precise FP model implied by the command line or a directive prevents vectorization. Consider using fast FP model   [ iso-3dfd_parallel.cc(48,7) ]
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: iso_3dfd(float *, float *, float *, float *, int, int, int, int, int, int, int, int)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at iso-3dfd_parallel.cc(40,2) inlined into iso-3dfd_parallel.cc(74,5)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at iso-3dfd_parallel.cc(41,4) inlined into iso-3dfd_parallel.cc(74,5)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+      LOOP BEGIN at iso-3dfd_parallel.cc(42,3) inlined into iso-3dfd_parallel.cc(74,5)
+         remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+         LOOP BEGIN at iso-3dfd_parallel.cc(47,6) inlined into iso-3dfd_parallel.cc(74,5)
+            remark #15331: loop was not vectorized: precise FP model implied by the command line or a directive prevents vectorization. Consider using fast FP model   [ iso-3dfd_parallel.cc(48,7) ]
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at iso-3dfd_parallel.cc(40,2) inlined into iso-3dfd_parallel.cc(80,5)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at iso-3dfd_parallel.cc(41,4) inlined into iso-3dfd_parallel.cc(80,5)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+      LOOP BEGIN at iso-3dfd_parallel.cc(42,3) inlined into iso-3dfd_parallel.cc(80,5)
+         remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+         LOOP BEGIN at iso-3dfd_parallel.cc(47,6) inlined into iso-3dfd_parallel.cc(80,5)
+            remark #15331: loop was not vectorized: precise FP model implied by the command line or a directive prevents vectorization. Consider using fast FP model   [ iso-3dfd_parallel.cc(48,7) ]
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at iso-3dfd_parallel.cc(72,3)
+   remark #15543: loop was not vectorized: loop with function call not considered an optimization candidate.
+LOOP END
+===========================================================================
